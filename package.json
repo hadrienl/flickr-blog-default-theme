@@ -1,0 +1,21 @@
+{
+  "name": "flickr-blog-default-theme",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install": "bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hadrienl/flickr-blog-default-theme.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/hadrienl/flickr-blog-default-theme/issues"
+  },
+  "dependencies": {
+    "q": "~1.1.2"
+  }
+}
