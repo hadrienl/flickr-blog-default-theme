@@ -36,9 +36,10 @@
         class="column small-12 medium-6 large-4 home-photoset"
         data-component="photoset">
         <div
-          class="cover"
+          class="cover {{ photoset.cover.orientation }}"
           style="background-image: url('{{ photoset.cover.getSrc('m') }}')"
-          data-component-attribute-style="background-image: url('\{\{ photoset.cover.getSrc('m') \}\}')"></div>
+          data-component-attribute-style="background-image: url('\{\{ photoset.cover.getSrc('m') \}\}')"
+          data-component-attribute-class="cover \{\{ photoset.cover.orientation \}\}"></div>
         <p
           class="home-photoset-date">
           <time

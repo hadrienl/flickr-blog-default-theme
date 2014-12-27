@@ -92,11 +92,15 @@
           if (!attributes[attr]) {
             attributes[attr] = [];
           }
-
-          el.setAttribute(
-            attr,
-            self.interpolate(data, el.dataset[k])
-          );
+          var val = self.interpolate(data, el.dataset[k]);
+          if ('class' === attr) {
+            el.className = val;
+          } else {
+            el.setAttribute(
+              attr,
+              val
+            );
+          }
         }
       }
     });

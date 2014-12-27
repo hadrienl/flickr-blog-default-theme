@@ -57,6 +57,12 @@ header {
   -webkit-transition: -webkit-filter .2s ease-in;
   -moz-transition: -moz-filter .2s ease-in;
 }
+.home-photoset .cover.portrait {
+  background-size: 100% auto;
+}
+.home-photoset .cover.landscape {
+  background-size: auto 100%;
+}
 .home-photoset:hover .cover {
   -webkit-filter: blur(5px); 
   -moz-filter: blur(5px); 
