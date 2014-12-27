@@ -2,6 +2,9 @@
 body {
   background: #eee;
 }
+body * {
+  font-family: 'Ruluko', 'helvetica neue', helvetica, sans-serif;
+}
 .photoset-cover {
   position: fixed;
   height: 100vh;
