@@ -1,7 +1,7 @@
 {
-  "name": "flickr-blog-default-theme",
+  "name": "FlickrBlog default theme",
   "version": "0.0.0",
-  "description": "",
+  "description": "FlickrBlog photoblog tool default theme",
   "main": "index.js",
   "scripts": {
     "install": "bower install"
