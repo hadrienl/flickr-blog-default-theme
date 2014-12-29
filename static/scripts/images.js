@@ -32,10 +32,13 @@ function createImg(span) {
   img.setAttribute('src', span.dataset.src);
   img.setAttribute('title', span.dataset.title);
   img.setAttribute('alt', span.dataset.alt);
-  span.parentNode.insertBefore(img, span);
   img.onload = function () {
-    span.parentNode.className += ' displayed';
+    var p = span.parentNode;
+    p.insertBefore(img, span);
     span.remove();
+    setTimeout(function () {
+      p.className += ' displayed';
+    });
   };
 }
 
