@@ -9,6 +9,23 @@
   <link rel="alternate" type="application/rss+xml" title="{{ siteTitle }}" href="/rss">
   <link href='http://fonts.googleapis.com/css?family=Ruluko' rel='stylesheet' type='text/css'>
   {% block head %}{% endblock %}
+  {% block seo %}
+  <meta property="og:site_name" content="{{ siteTitle }}">
+  <meta itemprop="name" content="{{ siteTitle }}">
+  <meta property="og:type" content="blog">
+
+  <meta property="og:title"  content="{{ photoset.title || siteTitle }}" />
+  <meta name="twitter:title" content="{{ photoset.title || siteTitle }}" />
+
+  <meta name="description" content="{{ photoset.description | markdown | striptags | raw | truncate(200) }}">
+  <meta name="og:description" content="{{ photoset.description | markdown | striptags | raw | truncate(200) 
+  }}">
+  <meta name="twitter:description" content="{{ photoset.description | markdown | striptags | raw | truncate(200) }}">
+
+  <meta itemprop="image" content="{{ photoset.cover.getSrc('m') }}">
+  <meta property="og:image" content="{{ photoset.cover.getSrc('m') }}">
+  <meta name="twitter:image" content="{{ photoset.cover.getSrc('m') }}">
+  {% endblock %}
 </head>
 <body>
   <div
@@ -16,7 +33,7 @@
     {% if photoset.cover %}
     <div
       class="photoset-cover"
-      style="background-image: url('{{ photoset.cover.url_m }}');"></div>
+      style="background-image: url('{{ photoset.cover.getSrc('m') }}');"></div>
     {% endif %}
     {% block body %}{% endblock %}
     <footer>
